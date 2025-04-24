@@ -7,7 +7,7 @@ const abi = [
 ];
 
 async function getUser(userId) {
-  const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
+  const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_KEY);
   const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS, abi, provider);
 
   try {

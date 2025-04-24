@@ -7,7 +7,7 @@ const abi = [
 ];
 
 async function updateUser(userId, newPublicKey) {
-  const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
+  const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_KEY);
   const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
   const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS, abi, signer);
 

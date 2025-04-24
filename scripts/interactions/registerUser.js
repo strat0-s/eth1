@@ -8,7 +8,7 @@ const contractABI = [
 
 async function registerUser(userId, publicKeyText) {
   try {
-    const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
+    const provider = new ethers.JsonRpcProvider(process.env.ALCHEMY_API_KEY);
     const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
     const contract = new ethers.Contract(process.env.CONTRACT_ADDRESS, contractABI, signer);
     
@@ -46,4 +46,4 @@ async function registerUser(userId, publicKeyText) {
   }
 }
 
-registerUser("tut", "aksjd").catch(console.error);
+registerUser("sap", "helloSapLikeMiners").catch(console.error);
